@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #0D0F14;
+}
+
+.cont-1{
+    height: 100px;
+    width: 100%;
+    margin: 0 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont-1 input{
+    height: 50px;
+    width: 300px;
+    border-radius: 9px;
+    font-size: 18px;
+    border: 1px solid #2A2E36;
+    border-radius: 10px;
+    width: 250px;
+    outline: none;
+    background: #1C1F26;
+    color: #A0A4AE ;
+    padding-left: 20px;
+    cursor: pointer;
+    font-family: "TikTok Sans", sans-serif;
+    margin: 0 5px;
+    margin-left: 10px;
+    box-shadow: -2px 4px 8px -2px #0c0e13;
+}
+.cont-1 button{
+    height: 50px;
+    width: 80px;
+    border: 0;
+    cursor: pointer;
+    background-color: #c9a524;
+    color: #202020;
+    font-family: "TikTok Sans", sans-serif;
+    border-radius: 10px;
+    font-size: 21px;
+    font-weight: 600;
+    transition: all .2s;
+    margin: 0 5px;
+    margin-right: 10px;
+    box-shadow: -2px 4px 8px -2px #0c0e13;
+}
+.cont-1 button:hover{
+    background-color: #FFDD44;
+}
+
+h1{
+    font-size: 40px;
+    color: #cbcdd1;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-self: center;
+    margin: 150px 10px;
+    text-align: center;
+}
+
+img{
+    height: auto;
+    width: 200px;
+    display: flex;
+    justify-self: center;
+}
+
+h2{
+    font-size: 30px;
+    color: #c9a524;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    position: relative;
+    margin: -30px 10px;
+}
+p{
+    font-size: 25px;
+    color: #cbcdd1;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    position: relative;
+    margin: 40px 0;
+}
