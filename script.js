@@ -4,20 +4,19 @@ async function fetchPoke(){
     const pokemon = document.querySelector('input').value
     const api = await fetch("https://pokeapi.co/api/v2/pokemon/" + pokemon)
 
+    if(!api.ok){
+        const container = document.createElement('div')
+        document.body.appendChild(container)
+
+        const h2 = document.createElement("h2")
+        document.body.appendChild(h2)
+        h2.innerHTML = "Pokemon Not Found!"
+        h2.style.color = "#cbcdd1"
+    }
+
     const data = await api.json()
 
     const container = document.createElement('div')
-    container.style.height = "100%"
-    container.style.width = "100%"
-    container.style.backgroundColor = "#0D0F14"
-    container.style.position = "absolute"
-    container.style.top = "0"
-    container.style.display = "flex"
-    container.style.justifySelf = "center"
-    container.style.justifyContent = "center"
-    container.style.alignContent = "center"
-
-
     document.body.appendChild(container)
 
     const img = document.createElement('img')
@@ -40,17 +39,6 @@ async function fetchPoke(){
 function newPokemon(){
 
     const container = document.createElement('div')
-    container.style.height = "100%"
-    container.style.width = "100%"
-    container.style.backgroundColor = "#0D0F14"
-    container.style.position = "absolute"
-    container.style.top = "0"
-    container.style.display = "flex"
-    container.style.justifySelf = "center"
-    container.style.justifyContent = "center"
-    container.style.alignContent = "center"
-    
-    
     document.body.appendChild(container)
     
     const img = document.createElement('img')
@@ -70,11 +58,24 @@ function newPokemon(){
 
 }
 
+function errorHandle(){
+    const container = document.createElement('div')
+    document.body.appendChild(container)
+
+    const h2 = document.createElement("h2")
+    document.body.appendChild(h2)
+    h2.innerHTML = "Pokemon Not Found! \nOnly 1,025 Pokémons are officially signed"
+    h2.style.color = "#cbcdd1"
+}
+
 const findPoke = document.querySelector('button')
 findPoke.addEventListener("click", () =>{
     const pokemon = document.querySelector('input').value
     if(pokemon.toLowerCase()=="shubham" || pokemon=="50" || pokemon==50){
         newPokemon()
+    }
+    else if(Number(pokemon)>1025){
+        errorHandle()
     }
     else{
         fetchPoke()

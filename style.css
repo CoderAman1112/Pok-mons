@@ -14,6 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: static;
 }
 .cont-1 input{
     height: 50px;
@@ -94,4 +95,22 @@ p{
     text-align: center;
     position: relative;
     margin: 40px 0;
+}
+
+div{
+    height: 100%;
+    width: 100%;
+    background-color: #0D0F14;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+}
+
+@media (max-width: 440px){
+    h1{
+        margin: 20% 10px;
+    }
 }
